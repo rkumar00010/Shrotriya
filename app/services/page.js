@@ -7,7 +7,7 @@ export default function ServicesPage() {
       <PageHero
         title="Services"
         heading="Our Services"
-        subtitle="Comprehensive healthcare solutions and support services for smooth hospital operations."
+        subtitle="Medical equipment supply, installation and maintenance, and customer support — Monday to Saturday, 9:30 AM to 6:30 PM."
         image="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=1400&q=80"
       />
       <section className="sec serv-sec">
@@ -18,80 +18,87 @@ export default function ServicesPage() {
               End-to-End <span>Healthcare Services</span>
             </h2>
             <p className="ssub">
-              Beyond supplying equipment, we provide complete support services to ensure your facility operates at its best.
+              Shrotriya Industries Private Limited supports your facility from procurement through installation, maintenance, and ongoing customer care.
             </p>
           </div>
           <div className="serv-grid fade-in">
-            <div className="serv-card">
+            <div className="serv-card" id="supply" style={{ scrollMarginTop: "100px" }}>
               <div className="serv-img">
-                <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=600&q=80" alt="Supply" />
+                <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=600&q=80" alt="Medical equipment supply" />
                 <div className="serv-img-ov"></div>
                 <span className="serv-lbl">Supply</span>
               </div>
               <div className="serv-body">
                 <div className="serv-ico-sm">📦</div>
-                <h3>Medical Equipment Supply</h3>
-                <p>Complete range of medical equipment supply for hospitals, clinics, and healthcare facilities.</p>
+                <h3>Medical equipment supply</h3>
+                <p>
+                  Complete medical equipment supply for hospitals, clinics, and healthcare facilities — ICU, OT, emergency, surgical, and category-wise products as per your requirements.
+                </p>
                 <ul className="serv-list">
                   <li>Wide product range</li>
+                  <li>Genuine brands</li>
                   <li>Competitive pricing</li>
-                  <li>Fast delivery</li>
                 </ul>
                 <Link className="serv-lnk" href="/contact">
-                  Learn More →
+                  Enquire →
                 </Link>
               </div>
             </div>
-            <div className="serv-card">
+            <div className="serv-card" id="maintenance" style={{ scrollMarginTop: "100px" }}>
               <div className="serv-img">
-                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80" alt="Setup" />
+                <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=600&q=80" alt="Installation and Maintenance" />
                 <div className="serv-img-ov"></div>
-                <span className="serv-lbl">Setup</span>
-              </div>
-              <div className="serv-body">
-                <div className="serv-ico-sm">🏥</div>
-                <h3>Hospital / Clinic Setup</h3>
-                <p>End-to-end hospital and clinic setup services from planning to execution.</p>
-                <ul className="serv-list">
-                  <li>Space planning</li>
-                  <li>Equipment selection</li>
-                  <li>Installation services</li>
-                </ul>
-                <Link className="serv-lnk" href="/contact">
-                  Learn More →
-                </Link>
-              </div>
-            </div>
-            <div className="serv-card">
-              <div className="serv-img">
-                <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=600&q=80" alt="Maintenance" />
-                <div className="serv-img-ov"></div>
-                <span className="serv-lbl">Maintenance</span>
+                <span className="serv-lbl">Install</span>
               </div>
               <div className="serv-body">
                 <div className="serv-ico-sm">🔧</div>
-                <h3>Installation &amp; Maintenance</h3>
-                <p>Professional installation and regular maintenance services for all medical equipment.</p>
+                <h3>Installation and Maintenance</h3>
+                <p>
+                  Professional installation and maintenance services so your equipment runs reliably — planned checks and technical assistance aligned with manufacturer guidelines.
+                </p>
                 <ul className="serv-list">
-                  <li>Preventive checks</li>
-                  <li>Technical support</li>
-                  <li>24/7 assistance</li>
+                  <li>Installation support</li>
+                  <li>Preventive maintenance</li>
+                  <li>Technical assistance</li>
                 </ul>
                 <Link className="serv-lnk" href="/contact">
-                  Learn More →
+                  Enquire →
+                </Link>
+              </div>
+            </div>
+            <div className="serv-card" id="support" style={{ scrollMarginTop: "100px" }}>
+              <div className="serv-img">
+                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80" alt="Customer support" />
+                <div className="serv-img-ov"></div>
+                <span className="serv-lbl">Support</span>
+              </div>
+              <div className="serv-body">
+                <div className="serv-ico-sm">🕐</div>
+                <h3>Customer Support</h3>
+                <p>
+                  Reach our team for queries, service requests, and coordination. <strong>Customer support: 9:30 AM to 6:30 PM, Monday to Saturday.</strong>
+                </p>
+                <ul className="serv-list">
+                  <li>Phone: 0120-4196566, 9310468210</li>
+                  <li>Mobile: 9911411821</li>
+                  <li>Sales@shrotriyaindustries.com</li>
+                  <li>Info@shrotriyaindustries.com</li>
+                </ul>
+                <Link className="serv-lnk" href="/contact">
+                  Contact us →
                 </Link>
               </div>
             </div>
           </div>
           <div className="support-cta fade-in" style={{ marginTop: "52px" }}>
             <div>
-              <h3>24/7 Customer Support</h3>
+              <h3>Need a quotation?</h3>
               <p>
-                Our dedicated support team is available round the clock to assist you with queries, technical issues, or service requests.
+                Share your hospital or clinic requirements — we will respond with product options and timelines during business hours (Mon–Sat, 9:30 AM – 6:30 PM).
               </p>
             </div>
             <Link className="btn-p" href="/contact">
-              Contact Support →
+              Get in Touch →
             </Link>
           </div>
         </div>

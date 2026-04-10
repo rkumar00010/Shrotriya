@@ -5,7 +5,8 @@ export default function AboutPage() {
     <>
       <PageHero
         title="About Us"
-        subtitle="15+ years of excellence in premium medical equipment supply and healthcare solutions."
+        heading="Shrotriya Industries Private Limited"
+        subtitle="More than 20 years of experience in medical equipment supply — serving ICU, OT, and emergency needs across India."
         image="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1400&q=80"
       />
       <section className="sec">
@@ -14,35 +15,35 @@ export default function AboutPage() {
             <div>
               <div className="stag">Our Story</div>
               <h2 className="stitle">
-                Shrotriya <span>Industries</span>
+                Shrotriya Industries <span>Private Limited</span>
               </h2>
               <p className="ssub">
-                Shrotriya Industries is a leading supplier of premium medical equipment and healthcare solutions, headquartered in Greater Noida, Uttar Pradesh.
+                We are a leading supplier of medical equipment and healthcare solutions, with a corporate office in Greater Noida and a branch in Noida, Uttar Pradesh.
               </p>
               <p style={{ color: "var(--text-mid)", fontSize: "0.95rem", lineHeight: 1.8, marginTop: "16px" }}>
-                We partner with world-renowned manufacturers to bring reliable medical technology to Indian healthcare providers with dependable after-sales support.
+                With <strong>more than 20 years</strong> of experience, we focus on ICU, OT and emergency equipment, surgical needs, consumables, and related categories — backed by supply, installation, maintenance, and customer support (Monday–Saturday, 9:30 AM – 6:30 PM).
               </p>
               <div className="about-stats">
                 <div className="about-stat">
-                  <div className="num">500+</div>
+                  <div className="num">100+</div>
                   <div className="lbl">Hospitals Served</div>
                 </div>
                 <div className="about-stat">
-                  <div className="num">1000+</div>
-                  <div className="lbl">Clinics &amp; Labs</div>
-                </div>
-                <div className="about-stat">
-                  <div className="num">50+</div>
-                  <div className="lbl">Product Categories</div>
-                </div>
-                <div className="about-stat">
-                  <div className="num">15+</div>
+                  <div className="num">20+</div>
                   <div className="lbl">Years Experience</div>
+                </div>
+                <div className="about-stat">
+                  <div className="num">ICU</div>
+                  <div className="lbl">OT &amp; Emergency</div>
+                </div>
+                <div className="about-stat">
+                  <div className="num">2</div>
+                  <div className="lbl">Office Locations</div>
                 </div>
               </div>
             </div>
             <div className="about-img-box">
-              <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80" alt="About Shrotriya Industries" />
+              <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80" alt="About Shrotriya Industries Private Limited" />
             </div>
           </div>
         </div>
@@ -51,27 +52,19 @@ export default function AboutPage() {
         <div className="si">
           <div className="why-grid">
             <div className="cert-box fade-in">
-              <h3>Quality Certifications</h3>
+              <h3>Locations</h3>
               <div className="cert-list">
                 <div className="cert-it">
-                  <div className="cert-badge">ISO 9001:2015</div>
-                  <p>Quality Management System</p>
+                  <div className="cert-badge">Corporate</div>
+                  <p>C-313, Beta 1, Greater Noida, Distt. Gautam Budh Nagar (U.P.) – 201306</p>
                 </div>
                 <div className="cert-it">
-                  <div className="cert-badge">CE Marking</div>
-                  <p>European Conformity</p>
+                  <div className="cert-badge">Branch</div>
+                  <p>B106, Sector-63, Noida, Distt. Gautam Budh Nagar (U.P.) – 201309</p>
                 </div>
                 <div className="cert-it">
-                  <div className="cert-badge">FDA Approved</div>
-                  <p>US Food &amp; Drug Administration</p>
-                </div>
-                <div className="cert-it">
-                  <div className="cert-badge">GMP Certified</div>
-                  <p>Good Manufacturing Practice</p>
-                </div>
-                <div className="cert-it">
-                  <div className="cert-badge">MSME Reg.</div>
-                  <p>Registered MSME Enterprise, Govt. of India</p>
+                  <div className="cert-badge">Map</div>
+                  <p>Branch / map reference: B106, Sector 63, Noida</p>
                 </div>
               </div>
             </div>
@@ -81,28 +74,28 @@ export default function AboutPage() {
                 Delivering <span>Better Healthcare</span>
               </h2>
               <p className="ssub" style={{ marginBottom: "24px" }}>
-                Our mission is to empower healthcare providers with reliable, high-quality medical equipment and end-to-end support services.
+                Our mission is to empower healthcare providers with reliable medical equipment, genuine brands, and dependable support from enquiry to after-sales service.
               </p>
               <div className="why-pts">
                 <div className="why-pt">
                   <div className="wy-ico">🎯</div>
                   <div>
                     <h4>Our Vision</h4>
-                    <p>To be India&apos;s most trusted medical equipment partner, known for quality, reliability, and service excellence.</p>
+                    <p>To remain a trusted medical equipment partner for hospitals and clinics, known for quality products and responsive service.</p>
                   </div>
                 </div>
                 <div className="why-pt">
                   <div className="wy-ico">💎</div>
                   <div>
                     <h4>Our Values</h4>
-                    <p>Integrity, quality, customer-first approach, and continuous improvement in everything we do.</p>
+                    <p>Integrity, customer focus, and long-term relationships with healthcare institutions.</p>
                   </div>
                 </div>
                 <div className="why-pt">
                   <div className="wy-ico">🤝</div>
                   <div>
                     <h4>Our Commitment</h4>
-                    <p>Long-term partnerships built on trust, transparency, and exceptional after-sales support.</p>
+                    <p>Transparent dealings, authorised supply chains, and support within our committed business hours.</p>
                   </div>
                 </div>
               </div>

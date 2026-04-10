@@ -2,8 +2,8 @@ import "./globals.css";
 import SiteShell from "./components/SiteShell";
 
 export const metadata = {
-  title: "Shrotriya Industries",
-  description: "Premium medical equipment supply"
+  title: "Shrotriya Industries Private Limited",
+  description: "Medical equipment supply — ICU, OT, emergency, surgical. Greater Noida & Noida."
 };
 
 export default function RootLayout({ children }) {

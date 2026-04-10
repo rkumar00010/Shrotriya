@@ -5,21 +5,27 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const productSubLinks = [
-  { label: "Diagnostic Equipment", href: "/products" },
-  { label: "Hospital Furniture", href: "/products" },
-  { label: "Surgical Instruments", href: "/products" },
-  { label: "ICU & Emergency", href: "/products" },
-  { label: "Laboratory Equipment", href: "/products" },
-  { label: "PPE & Safety", href: "/products" }
+  { label: "ICU, OT and Emergency", href: "/products#icu-ot-emergency" },
+  { label: "Surgical", href: "/products#surgical" }
+];
+
+const categorySubLinks = [
+  { label: "Consumables and Disposables", href: "/categories#consumables-disposables" },
+  { label: "ICU and Emergency", href: "/categories#icu-emergency" },
+  { label: "Maternity and Neonatal", href: "/categories#maternity-neonatal" },
+  { label: "Surgical Instruments", href: "/categories#surgical-instruments" }
+];
+
+const serviceSubLinks = [
+  { label: "Medical equipment supply", href: "/services#supply" },
+  { label: "Installation and Maintenance", href: "/services#maintenance" },
+  { label: "Customer Support", href: "/services#support" }
 ];
 
 const brandSubLinks = [
-  { label: "Philips Healthcare", href: "/brands" },
-  { label: "GE Healthcare", href: "/brands" },
-  { label: "Siemens Healthineers", href: "/brands" },
-  { label: "3M Medical", href: "/brands" },
-  { label: "Medtronic", href: "/brands" },
-  { label: "BPL Medical", href: "/brands" }
+  { label: "Fisher & Paykel Healthcare India Pvt Ltd", href: "/brands" },
+  { label: "Draeger India Pvt Ltd", href: "/brands" },
+  { label: "Matriderm (Medskin Solution)", href: "/brands" }
 ];
 
 function isMobileNav() {
@@ -42,30 +48,67 @@ export default function SiteShell({ children }) {
   }, [menuOpen]);
 
   const productsActive = isActive(pathname, "/products");
+  const categoriesActive = isActive(pathname, "/categories");
+  const servicesActive = isActive(pathname, "/services");
   const brandsActive = isActive(pathname, "/brands");
 
   const ddMenuStyle = (key) =>
     menuOpen && mobileDd === key ? { display: "block" } : undefined;
+
+  const toggleDd = (key) => (e) => {
+    if (menuOpen && isMobileNav()) {
+      e.preventDefault();
+      setMobileDd((m) => (m === key ? null : key));
+    } else {
+      setMenuOpen(false);
+    }
+  };
 
   return (
     <>
       <div className="topbar">
         <div className="topbar-inner">
           <div className="tl">
-            <div className="ti"><span className="ic">📞</span><a href="tel:+911234567890">+91-1234567890</a></div>
-            <div className="ti"><span className="ic">✉</span><a href="mailto:info@shrotriyaindustries.com">info@shrotriyaindustries.com</a></div>
+            <div className="ti">
+              <span className="ic">📞</span>
+              <a href="tel:01204196566">0120-4196566</a>
+              <span style={{ opacity: 0.5, margin: "0 4px" }}>|</span>
+              <a href="tel:9310468210">9310468210</a>
+            </div>
+            <div className="ti">
+              <span className="ic">📱</span>
+              <a href="tel:9911411821">9911411821</a>
+            </div>
+            <div className="ti">
+              <span className="ic">✉</span>
+              <a href="mailto:Sales@shrotriyaindustries.com">Sales@shrotriyaindustries.com</a>
+            </div>
+            <div className="ti">
+              <span className="ic">✉</span>
+              <a href="mailto:Info@shrotriyaindustries.com">Info@shrotriyaindustries.com</a>
+            </div>
           </div>
           <div className="tr">
-            <div className="ti"><span className="ic">🕒</span><span>Mon-Sat: 9:00 AM - 6:00 PM</span></div>
-            <div className="ti"><span className="ic">📍</span><span>Greater Noida, UP, India</span></div>
+            <div className="ti">
+              <span className="ic">🕒</span>
+              <span>Mon–Sat: 9:30 AM – 6:30 PM</span>
+            </div>
+            <div className="ti">
+              <span className="ic">📍</span>
+              <span>Greater Noida &amp; Noida, UP</span>
+            </div>
           </div>
         </div>
       </div>
 
       <nav>
         <div className="nav-inner">
-          <Link className="logo-wrap" href="/" aria-label="Shrotriya Industries home" onClick={() => setMenuOpen(false)}>
-            <img className="logo-img" src="/assets/images/Shrotriya.png" alt="Shrotriya Industries" />
+          <Link className="logo-wrap" href="/" aria-label="Shrotriya Industries Private Limited home" onClick={() => setMenuOpen(false)}>
+            <img className="logo-img" src="/assets/images/Shrotriya.png" alt="Shrotriya Industries Private Limited" />
+            <div className="logo-name">
+              <span className="ln-main">Shrotriya Industries</span>
+              <span className="ln-sub">Private Limited</span>
+            </div>
           </Link>
           <div className={`nav-menu ${menuOpen ? "open" : ""}`} id="navMenu">
             <Link
@@ -82,14 +125,7 @@ export default function SiteShell({ children }) {
                 id="nav-products"
                 href="/products"
                 className={productsActive ? "active" : ""}
-                onClick={(e) => {
-                  if (menuOpen && isMobileNav()) {
-                    e.preventDefault();
-                    setMobileDd((m) => (m === "products" ? null : "products"));
-                  } else {
-                    setMenuOpen(false);
-                  }
-                }}
+                onClick={toggleDd("products")}
               >
                 Products
               </Link>
@@ -102,22 +138,42 @@ export default function SiteShell({ children }) {
               </div>
             </div>
 
-            <Link
-              id="nav-categories"
-              href="/categories"
-              className={isActive(pathname, "/categories") ? "active" : ""}
-              onClick={() => setMenuOpen(false)}
-            >
-              Categories
-            </Link>
-            <Link
-              id="nav-services"
-              href="/services"
-              className={isActive(pathname, "/services") ? "active" : ""}
-              onClick={() => setMenuOpen(false)}
-            >
-              Services
-            </Link>
+            <div className="nav-dd">
+              <Link
+                id="nav-categories"
+                href="/categories"
+                className={categoriesActive ? "active" : ""}
+                onClick={toggleDd("categories")}
+              >
+                Categories
+              </Link>
+              <div className="dd-menu" style={ddMenuStyle("categories")}>
+                {categorySubLinks.map((item) => (
+                  <Link key={item.label} href={item.href} onClick={() => setMenuOpen(false)}>
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div className="nav-dd">
+              <Link
+                id="nav-services"
+                href="/services"
+                className={servicesActive ? "active" : ""}
+                onClick={toggleDd("services")}
+              >
+                Services
+              </Link>
+              <div className="dd-menu" style={ddMenuStyle("services")}>
+                {serviceSubLinks.map((item) => (
+                  <Link key={item.label} href={item.href} onClick={() => setMenuOpen(false)}>
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
             <Link
               id="nav-industries"
               href="/industries"
@@ -132,14 +188,7 @@ export default function SiteShell({ children }) {
                 id="nav-brands"
                 href="/brands"
                 className={brandsActive ? "active" : ""}
-                onClick={(e) => {
-                  if (menuOpen && isMobileNav()) {
-                    e.preventDefault();
-                    setMobileDd((m) => (m === "brands" ? null : "brands"));
-                  } else {
-                    setMenuOpen(false);
-                  }
-                }}
+                onClick={toggleDd("brands")}
               >
                 Brands
               </Link>
@@ -182,9 +231,10 @@ export default function SiteShell({ children }) {
           <div className="footer-grid">
             <div className="footer-brand">
               <Link className="logo-wrap" href="/" style={{ marginBottom: "16px" }}>
-                <img className="logo-img-footer" src="/assets/images/Shrotriya.png" alt="Shrotriya Industries" />
+                <img className="logo-img-footer" src="/assets/images/Shrotriya.png" alt="Shrotriya Industries Private Limited" />
               </Link>
-              <p>Leading supplier of medical equipment and healthcare solutions. Trusted by hospitals, clinics, and healthcare organizations nationwide.</p>
+              <p style={{ fontWeight: 600, color: "#fff", marginBottom: "8px" }}>Shrotriya Industries Private Limited</p>
+              <p>Medical equipment supply for ICU, OT and emergency care. Trusted by 100+ hospitals across India.</p>
             </div>
             <div className="fc">
               <h4>Quick Links</h4>
@@ -200,26 +250,33 @@ export default function SiteShell({ children }) {
               </ul>
             </div>
             <div className="fc">
-              <h4>Products</h4>
-              <ul>
-                <li><Link href="/products">Diagnostic Equipment</Link></li>
-                <li><Link href="/products">Hospital Furniture</Link></li>
-                <li><Link href="/products">Surgical Instruments</Link></li>
-                <li><Link href="/products">ICU &amp; Emergency</Link></li>
+              <h4>Offices</h4>
+              <ul className="fc-office-block">
+                <li>
+                  <strong>Corporate</strong>
+                  <br />
+                  C-313, Beta 1, Greater Noida, Distt. Gautam Budh Nagar (U.P.) – 201306
+                </li>
+                <li>
+                  <strong>Branch</strong>
+                  <br />
+                  B106, Sector-63, Noida, Distt. Gautam Budh Nagar (U.P.) – 201309
+                </li>
               </ul>
             </div>
             <div className="fc">
-              <h4>Contact Info</h4>
+              <h4>Contact</h4>
               <div className="fcl">
-                <div className="fcr"><span className="fi">📞</span><span>+91-1234567890<br />+91-9876543210</span></div>
-                <div className="fcr"><span className="fi">✉</span><span>info@shrotriyaindustries.com</span></div>
-                <div className="fcr"><span className="fi">📍</span><span>Greater Noida - 201306, India</span></div>
+                <div className="fcr"><span className="fi">📞</span><span>0120-4196566<br />9310468210</span></div>
+                <div className="fcr"><span className="fi">📱</span><span><a href="tel:9911411821" style={{ color: "inherit" }}>9911411821</a></span></div>
+                <div className="fcr"><span className="fi">✉</span><span><a href="mailto:Sales@shrotriyaindustries.com" style={{ color: "inherit" }}>Sales@shrotriyaindustries.com</a><br /><a href="mailto:Info@shrotriyaindustries.com" style={{ color: "inherit" }}>Info@shrotriyaindustries.com</a></span></div>
+                <div className="fcr"><span className="fi">🕒</span><span>Mon–Sat: 9:30 AM – 6:30 PM</span></div>
               </div>
             </div>
           </div>
         </div>
         <div className="footer-btm">
-          <span>© 2026 Shrotriya Industries. All rights reserved.</span>
+          <span>© 2026 Shrotriya Industries Private Limited. All rights reserved.</span>
         </div>
       </footer>
     </>

@@ -1,18 +1,9 @@
 import PageHero from "../_shared/PageHero";
 
 const brands = [
-  { logo: "💙", name: "Philips Healthcare", line: "Imaging & Monitoring" },
-  { logo: "🔵", name: "GE Healthcare", line: "Diagnostics & ICU" },
-  { logo: "⚪", name: "Siemens Healthineers", line: "Radiology & Lab" },
-  { logo: "🔴", name: "3M Medical", line: "PPE & Infection Control" },
-  { logo: "🟣", name: "Medtronic", line: "Surgical & Cardiology" },
-  { logo: "🟢", name: "BPL Medical", line: "ECG & Patient Care" },
-  { logo: "🟡", name: "Stryker", line: "OR & Neurotechnology" },
-  { logo: "🟠", name: "Drager", line: "Ventilators & Anaesthesia" },
-  { logo: "🩵", name: "Abbott", line: "Diagnostics & Nutrition" },
-  { logo: "🌐", name: "Johnson & Johnson", line: "Surgical & Wound Care" },
-  { logo: "💚", name: "Baxter", line: "IV Solutions & Renal" },
-  { logo: "❤️", name: "Becton Dickinson", line: "Diagnostics & Medical Devices" }
+  { logo: "🌊", name: "Fisher & Paykel Healthcare India Pvt Ltd", line: "Respiratory care & acute care solutions" },
+  { logo: "🔷", name: "Draeger India Pvt Ltd", line: "Ventilation, anaesthesia & patient monitoring" },
+  { logo: "🩹", name: "Matriderm (Medskin Solution)", line: "Advanced wound & skin solutions" }
 ];
 
 export default function BrandsPage() {
@@ -21,7 +12,7 @@ export default function BrandsPage() {
       <PageHero
         title="Brands"
         heading="Brands We Supply"
-        subtitle="Authorised dealer of world-renowned medical equipment manufacturers."
+        subtitle="Authorised partnerships with leading medical equipment brands for genuine products and after-sales support."
         image="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1400&q=80"
       />
       <section className="sec brands-sec">
@@ -29,13 +20,13 @@ export default function BrandsPage() {
           <div className="sh fade-in">
             <div className="stag">Our Brand Partners</div>
             <h2 className="stitle">
-              Authorised Dealer of <span>Leading Brands</span>
+              Trusted <span>Manufacturer Partners</span>
             </h2>
             <p className="ssub">
-              We are authorised dealers and distributors for world-renowned manufacturers — ensuring genuine, certified products every time.
+              We work with Fisher &amp; Paykel Healthcare India Pvt Ltd, Draeger India Pvt Ltd, and Matriderm (Medskin Solution) — among others — to deliver reliable equipment to healthcare providers.
             </p>
           </div>
-          <div className="brands-grid fade-in" style={{ marginBottom: "52px" }}>
+          <div className="brands-grid fade-in" style={{ marginBottom: "52px", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }}>
             {brands.map((b) => (
               <div key={b.name} className="brand-card">
                 <div className="brand-logo">{b.logo}</div>
@@ -49,19 +40,19 @@ export default function BrandsPage() {
             <div className="cert-list">
               <div className="cert-it">
                 <div className="cert-badge">Authorised</div>
-                <p>All brands are supplied through official and authorised distribution channels</p>
+                <p>Products supplied through official and authorised distribution channels</p>
               </div>
               <div className="cert-it">
-                <div className="cert-badge">Genuine Parts</div>
-                <p>100% original spare parts and accessories — no counterfeits or grey-market products</p>
+                <div className="cert-badge">Genuine</div>
+                <p>Original equipment and accessories — no counterfeits or grey-market products</p>
               </div>
               <div className="cert-it">
                 <div className="cert-badge">Warranty</div>
-                <p>Full manufacturer warranty on all brand products supplied by us</p>
+                <p>Manufacturer warranty support on eligible products</p>
               </div>
               <div className="cert-it">
                 <div className="cert-badge">After-Sales</div>
-                <p>Dedicated brand-specific after-sales support and service engineers</p>
+                <p>Coordination for service, spares, and technical assistance</p>
               </div>
             </div>
           </div>
