@@ -3,3 +3,9 @@
 body {
   margin: 0;
 }
+
+/* Next.js: legacy main.js is not loaded; .fade-in would stay opacity:0 forever */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
