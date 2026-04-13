@@ -1,8 +1,18 @@
 import PageHero from "../_shared/PageHero";
+import fisherLogo from "../../assets/images/Fisher.jpeg";
+import draegerLogo from "../../assets/images/Draeger.jpeg";
 
 const brands = [
-  { logo: "🌊", name: "Fisher & Paykel Healthcare India Pvt Ltd", line: "Respiratory care & acute care solutions" },
-  { logo: "🔷", name: "Draeger India Pvt Ltd", line: "Ventilation, anaesthesia & patient monitoring" },
+  {
+    logo: fisherLogo.src,
+    name: "Fisher & Paykel Healthcare India Pvt Ltd",
+    line: "Respiratory care & acute care solutions"
+  },
+  {
+    logo: draegerLogo.src,
+    name: "Draeger India Pvt Ltd",
+    line: "Ventilation, anaesthesia & patient monitoring"
+  },
   { logo: "🩹", name: "Matriderm (Medskin Solution)", line: "Advanced wound & skin solutions" }
 ];
 
@@ -29,7 +39,9 @@ export default function BrandsPage() {
           <div className="brands-grid fade-in" style={{ marginBottom: "52px", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }}>
             {brands.map((b) => (
               <div key={b.name} className="brand-card">
-                <div className="brand-logo">{b.logo}</div>
+                <div className="brand-logo">
+                  {b.logo.startsWith("http") || b.logo.startsWith("/") ? <img src={b.logo} alt={b.name} /> : b.logo}
+                </div>
                 <h4>{b.name}</h4>
                 <p>{b.line}</p>
               </div>

@@ -1,4 +1,20 @@
 import Link from "next/link";
+import fisherLogo from "../assets/images/Fisher.jpeg";
+import draegerLogo from "../assets/images/Draeger.jpeg";
+
+const homeBrands = [
+  {
+    logo: fisherLogo.src,
+    name: "Fisher & Paykel Healthcare India Pvt Ltd",
+    line: "Respiratory care & acute care solutions"
+  },
+  {
+    logo: draegerLogo.src,
+    name: "Draeger India Pvt Ltd",
+    line: "Ventilation, anaesthesia & patient monitoring"
+  },
+  { logo: "🩹", name: "Matriderm (Medskin Solution)", line: "Advanced wound & skin solutions" }
+];
 
 export default function HomePage() {
   return (
@@ -167,6 +183,31 @@ export default function HomePage() {
               <h3>Surgical Instruments</h3>
               <p>Precision surgical tools and instruments</p>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="sec brands-sec">
+        <div className="si">
+          <div className="sh fade-in">
+            <div className="stag">Our Brand Partners</div>
+            <h2 className="stitle">
+              Trusted <span>Manufacturer Partners</span>
+            </h2>
+            <p className="ssub">
+              We work with Fisher &amp; Paykel Healthcare India Pvt Ltd, Draeger India Pvt Ltd, and Matriderm (Medskin Solution) — among others — to deliver reliable equipment to healthcare providers.
+            </p>
+          </div>
+          <div className="brands-grid fade-in" style={{ marginBottom: "8px", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }}>
+            {homeBrands.map((b) => (
+              <div key={b.name} className="brand-card">
+                <div className="brand-logo">
+                  {b.logo.startsWith("http") || b.logo.startsWith("/") ? <img src={b.logo} alt={b.name} /> : b.logo}
+                </div>
+                <h4>{b.name}</h4>
+                <p>{b.line}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

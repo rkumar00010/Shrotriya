@@ -75,12 +75,24 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
-              <div className="map-box">
-                <p>
-                  📍 Map location (branch)
-                  <br />
-                  <span style={{ fontSize: "0.88rem" }}>B106, Sector 63, Noida</span>
-                </p>
+              <div className="map-box" style={{ padding: 0, overflow: "hidden" }}>
+                <a
+                  href="https://www.google.com/maps/place/28%C2%B036'56.7%22N+77%C2%B022'44.0%22E/@28.6157532,77.3763085,17z/data=!3m1!4b1!4m4!3m3!8m2!3d28.6157532!4d77.3788834?hl=en&entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Open branch location in Google Maps"
+                  style={{ display: "block", width: "100%", height: "100%" }}
+                >
+                  <iframe
+                    title="Shrotriya branch map location"
+                    src="https://www.google.com/maps?q=28.6157532,77.3788834&z=17&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0, display: "block", pointerEvents: "none" }}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </a>
               </div>
             </div>
             <div className="form-box">

@@ -106,8 +106,7 @@ export default function SiteShell({ children }) {
           <Link className="logo-wrap" href="/" aria-label="Shrotriya Industries Private Limited home" onClick={() => setMenuOpen(false)}>
             <img className="logo-img" src="/assets/images/Shrotriya.png" alt="Shrotriya Industries Private Limited" />
             <div className="logo-name">
-              <span className="ln-main">Shrotriya Industries</span>
-              <span className="ln-sub">Private Limited</span>
+              <span className="ln-main">Shrotriya Industries Private Limited</span>
             </div>
           </Link>
           <div className={`nav-menu ${menuOpen ? "open" : ""}`} id="navMenu">
