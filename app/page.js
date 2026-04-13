@@ -1,6 +1,7 @@
 import Link from "next/link";
 import fisherLogo from "../assets/images/Fisher.jpeg";
 import draegerLogo from "../assets/images/Draeger.jpeg";
+import matridermLogo from "../assets/images/Matriderm.jpeg";
 
 const homeBrands = [
   {
@@ -13,7 +14,11 @@ const homeBrands = [
     name: "Draeger India Pvt Ltd",
     line: "Ventilation, anaesthesia & patient monitoring"
   },
-  { logo: "🩹", name: "Matriderm (Medskin Solution)", line: "Advanced wound & skin solutions" }
+  {
+    logo: matridermLogo.src,
+    name: "Matriderm (Medskin Solution)",
+    line: "Advanced wound & skin solutions"
+  }
 ];
 
 export default function HomePage() {

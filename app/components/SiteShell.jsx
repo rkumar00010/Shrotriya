@@ -2,36 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
-
-const productSubLinks = [
-  { label: "ICU, OT and Emergency", href: "/products#icu-ot-emergency" },
-  { label: "Surgical", href: "/products#surgical" }
-];
-
-const categorySubLinks = [
-  { label: "Consumables and Disposables", href: "/categories#consumables-disposables" },
-  { label: "ICU and Emergency", href: "/categories#icu-emergency" },
-  { label: "Maternity and Neonatal", href: "/categories#maternity-neonatal" },
-  { label: "Surgical Instruments", href: "/categories#surgical-instruments" }
-];
-
-const serviceSubLinks = [
-  { label: "Medical equipment supply", href: "/services#supply" },
-  { label: "Installation and Maintenance", href: "/services#maintenance" },
-  { label: "Customer Support", href: "/services#support" }
-];
-
-const brandSubLinks = [
-  { label: "Fisher & Paykel Healthcare India Pvt Ltd", href: "/brands" },
-  { label: "Draeger India Pvt Ltd", href: "/brands" },
-  { label: "Matriderm (Medskin Solution)", href: "/brands" }
-];
-
-function isMobileNav() {
-  if (typeof window === "undefined") return false;
-  return window.matchMedia("(max-width: 640px)").matches;
-}
+import { useState } from "react";
 
 function isActive(pathname, href) {
   if (href === "/") return pathname === "/";
@@ -41,28 +12,6 @@ function isActive(pathname, href) {
 export default function SiteShell({ children }) {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [mobileDd, setMobileDd] = useState(null);
-
-  useEffect(() => {
-    if (!menuOpen) setMobileDd(null);
-  }, [menuOpen]);
-
-  const productsActive = isActive(pathname, "/products");
-  const categoriesActive = isActive(pathname, "/categories");
-  const servicesActive = isActive(pathname, "/services");
-  const brandsActive = isActive(pathname, "/brands");
-
-  const ddMenuStyle = (key) =>
-    menuOpen && mobileDd === key ? { display: "block" } : undefined;
-
-  const toggleDd = (key) => (e) => {
-    if (menuOpen && isMobileNav()) {
-      e.preventDefault();
-      setMobileDd((m) => (m === key ? null : key));
-    } else {
-      setMenuOpen(false);
-    }
-  };
 
   return (
     <>
@@ -119,59 +68,32 @@ export default function SiteShell({ children }) {
               Home
             </Link>
 
-            <div className="nav-dd">
-              <Link
-                id="nav-products"
-                href="/products"
-                className={productsActive ? "active" : ""}
-                onClick={toggleDd("products")}
-              >
-                Products
-              </Link>
-              <div className="dd-menu" style={ddMenuStyle("products")}>
-                {productSubLinks.map((item) => (
-                  <Link key={item.label} href={item.href} onClick={() => setMenuOpen(false)}>
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
+            <Link
+              id="nav-products"
+              href="/products"
+              className={isActive(pathname, "/products") ? "active" : ""}
+              onClick={() => setMenuOpen(false)}
+            >
+              Products
+            </Link>
 
-            <div className="nav-dd">
-              <Link
-                id="nav-categories"
-                href="/categories"
-                className={categoriesActive ? "active" : ""}
-                onClick={toggleDd("categories")}
-              >
-                Categories
-              </Link>
-              <div className="dd-menu" style={ddMenuStyle("categories")}>
-                {categorySubLinks.map((item) => (
-                  <Link key={item.label} href={item.href} onClick={() => setMenuOpen(false)}>
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
+            <Link
+              id="nav-categories"
+              href="/categories"
+              className={isActive(pathname, "/categories") ? "active" : ""}
+              onClick={() => setMenuOpen(false)}
+            >
+              Categories
+            </Link>
 
-            <div className="nav-dd">
-              <Link
-                id="nav-services"
-                href="/services"
-                className={servicesActive ? "active" : ""}
-                onClick={toggleDd("services")}
-              >
-                Services
-              </Link>
-              <div className="dd-menu" style={ddMenuStyle("services")}>
-                {serviceSubLinks.map((item) => (
-                  <Link key={item.label} href={item.href} onClick={() => setMenuOpen(false)}>
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
+            <Link
+              id="nav-services"
+              href="/services"
+              className={isActive(pathname, "/services") ? "active" : ""}
+              onClick={() => setMenuOpen(false)}
+            >
+              Services
+            </Link>
 
             <Link
               id="nav-industries"
@@ -182,23 +104,14 @@ export default function SiteShell({ children }) {
               Industries
             </Link>
 
-            <div className="nav-dd">
-              <Link
-                id="nav-brands"
-                href="/brands"
-                className={brandsActive ? "active" : ""}
-                onClick={toggleDd("brands")}
-              >
-                Brands
-              </Link>
-              <div className="dd-menu" style={ddMenuStyle("brands")}>
-                {brandSubLinks.map((item) => (
-                  <Link key={item.label} href={item.href} onClick={() => setMenuOpen(false)}>
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
+            <Link
+              id="nav-brands"
+              href="/brands"
+              className={isActive(pathname, "/brands") ? "active" : ""}
+              onClick={() => setMenuOpen(false)}
+            >
+              Brands
+            </Link>
 
             <Link
               id="nav-about"
