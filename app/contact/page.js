@@ -70,7 +70,7 @@ export default function ContactPage() {
                   <div>
                     <h4>Branch Office</h4>
                     <p>
-                      B106, Sector-63, Noida, Distt. Gautam Budh Nagar (U.P.) – 201309
+                      B 106, Sector-63, Noida, Distt. Gautam Budh Nagar (U.P.) – 201309
                     </p>
                   </div>
                 </div>

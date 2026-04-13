@@ -135,7 +135,7 @@ export default function HomePage() {
             <div style={{ padding: "20px", background: "#fff", borderRadius: "12px", border: "1px solid var(--border)" }}>
               <h3 style={{ fontFamily: "'Playfair Display', serif", color: "var(--navy)", fontSize: "1.05rem", marginBottom: "10px" }}>Branch Office</h3>
               <p style={{ color: "var(--text-mid)", fontSize: "0.9rem", lineHeight: 1.65, margin: 0 }}>
-                B106, Sector-63, Noida, Distt. Gautam Budh Nagar (U.P.) – 201309
+                B 106, Sector-63, Noida, Distt. Gautam Budh Nagar (U.P.) – 201309
               </p>
             </div>
             <div style={{ padding: "20px", background: "#fff", borderRadius: "12px", border: "1px solid var(--border)" }}>
@@ -226,7 +226,8 @@ export default function HomePage() {
                 Your Trusted <span>Healthcare Partner</span>
               </h2>
               <p className="ssub">
-                For over 20 years, Shrotriya Industries Private Limited has supplied medical equipment with installation, maintenance, and customer support you can rely on.
+                Shrotriya Industries Private Limited supplies medical equipment with installation, maintenance, and customer support you can rely on—backed by a team with 20+ years of combined experience in the industry.
+
               </p>
               <div className="why-pts">
                 <div className="why-pt">

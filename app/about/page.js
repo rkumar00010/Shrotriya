@@ -60,11 +60,11 @@ export default function AboutPage() {
                 </div>
                 <div className="cert-it">
                   <div className="cert-badge">Branch</div>
-                  <p>B106, Sector-63, Noida, Distt. Gautam Budh Nagar (U.P.) – 201309</p>
+                  <p>B 106, Sector-63, Noida, Distt. Gautam Budh Nagar (U.P.) – 201309</p>
                 </div>
                 <div className="cert-it">
                   <div className="cert-badge">Map</div>
-                  <p>Branch / map reference: B106, Sector 63, Noida</p>
+                  <p>Branch / map reference: B 106, Sector 63, Noida</p>
                 </div>
               </div>
             </div>

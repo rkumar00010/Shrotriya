@@ -172,7 +172,7 @@ export default function SiteShell({ children }) {
                 <li>
                   <strong>Branch</strong>
                   <br />
-                  B106, Sector-63, Noida, Distt. Gautam Budh Nagar (U.P.) – 201309
+                  B 106, Sector-63, Noida, Distt. Gautam Budh Nagar (U.P.) – 201309
                 </li>
               </ul>
             </div>
