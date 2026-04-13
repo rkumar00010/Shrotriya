@@ -56,23 +56,23 @@ body {
   align-items: center;
 }
 .brand-logo {
-  width: 100%;
+  width: 90%;
   height: 84px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 12px;
+  /* margin-bottom: 12px; */
 }
 .brand-logo img {
  width: 90%;
-  height: 100px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 12px;
+  /* margin-bottom: 12px; */
 }
 .brand-card h4 {
-  min-height: 48px;
+  min-height: 18px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
