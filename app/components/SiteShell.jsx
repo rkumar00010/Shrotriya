@@ -30,11 +30,11 @@ export default function SiteShell({ children }) {
             </div>
             <div className="ti">
               <span className="ic">✉</span>
-              <a href="mailto:Sales@shrotriyaindustries.com">Sales@shrotriyaindustries.com</a>
+              <a href="mailto:sales@shrotriyaindustries.com">sales@shrotriyaindustries.com</a>
             </div>
             <div className="ti">
               <span className="ic">✉</span>
-              <a href="mailto:Info@shrotriyaindustries.com">Info@shrotriyaindustries.com</a>
+              <a href="mailto:info@shrotriyaindustries.com">info@shrotriyaindustries.com</a>
             </div>
           </div>
           <div className="tr">
@@ -181,7 +181,7 @@ export default function SiteShell({ children }) {
               <div className="fcl">
                 <div className="fcr"><span className="fi">📞</span><span>0120-4196566<br />9310468210</span></div>
                 <div className="fcr"><span className="fi">📱</span><span><a href="tel:9911411821" style={{ color: "inherit" }}>9911411821</a></span></div>
-                <div className="fcr"><span className="fi">✉</span><span><a href="mailto:Sales@shrotriyaindustries.com" style={{ color: "inherit" }}>Sales@shrotriyaindustries.com</a><br /><a href="mailto:Info@shrotriyaindustries.com" style={{ color: "inherit" }}>Info@shrotriyaindustries.com</a></span></div>
+                <div className="fcr"><span className="fi">✉</span><span><a href="mailto:sales@shrotriyaindustries.com" style={{ color: "inherit" }}>sales@shrotriyaindustries.com</a><br /><a href="mailto:info@shrotriyaindustries.com" style={{ color: "inherit" }}>info@shrotriyaindustries.com</a></span></div>
                 <div className="fcr"><span className="fi">🕒</span><span>Mon–Sat: 9:30 AM – 6:30 PM</span></div>
               </div>
             </div>

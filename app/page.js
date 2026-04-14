@@ -145,9 +145,9 @@ export default function HomePage() {
                 <br />
                 Mobile: <a href="tel:9911411821">9911411821</a>
                 <br />
-                <a href="mailto:Sales@shrotriyaindustries.com">Sales@shrotriyaindustries.com</a>
+                <a href="mailto:sales@shrotriyaindustries.com">sales@shrotriyaindustries.com</a>
                 <br />
-                <a href="mailto:Info@shrotriyaindustries.com">Info@shrotriyaindustries.com</a>
+                <a href="mailto:info@shrotriyaindustries.com">info@shrotriyaindustries.com</a>
                 <br />
                 <span style={{ marginTop: "8px", display: "inline-block" }}>Mon–Sat: 9:30 AM – 6:30 PM</span>
               </p>

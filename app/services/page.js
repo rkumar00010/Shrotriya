@@ -81,8 +81,8 @@ export default function ServicesPage() {
                 <ul className="serv-list">
                   <li>Phone: 0120-4196566, 9310468210</li>
                   <li>Mobile: 9911411821</li>
-                  <li>Sales@shrotriyaindustries.com</li>
-                  <li>Info@shrotriyaindustries.com</li>
+                  <li>sales@shrotriyaindustries.com</li>
+                  <li>info@shrotriyaindustries.com</li>
                 </ul>
                 <Link className="serv-lnk" href="/contact">
                   Contact us →

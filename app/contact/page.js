@@ -50,9 +50,9 @@ export default function ContactPage() {
                   <div>
                     <h4>Email</h4>
                     <p>
-                      <a href="mailto:Sales@shrotriyaindustries.com">Sales@shrotriyaindustries.com</a>
+                      <a href="mailto:sales@shrotriyaindustries.com">sales@shrotriyaindustries.com</a>
                       <br />
-                      <a href="mailto:Info@shrotriyaindustries.com">Info@shrotriyaindustries.com</a>
+                      <a href="mailto:info@shrotriyaindustries.com">info@shrotriyaindustries.com</a>
                     </p>
                   </div>
                 </div>
