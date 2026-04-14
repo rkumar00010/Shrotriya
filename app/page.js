@@ -301,7 +301,7 @@ export default function HomePage() {
               <div className="stat-lbl">OT &amp; Emergency</div>
             </div>
             <div className="stat-it fade-in">
-              <div className="stat-num">9:30–6:30</div>
+              <div className="stat-num stat-num-time">9:30–6:30</div>
               <div className="stat-lbl">Mon–Sat Support</div>
             </div>
           </div>

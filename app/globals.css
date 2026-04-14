@@ -26,6 +26,11 @@ body {
   letter-spacing: 0.02em;
   white-space: nowrap;
 }
+@media (max-width: 1024px) {
+  .logo-name {
+    display: none;
+  }
+}
 @media (max-width: 640px) {
   .logo-name {
     display: none;
