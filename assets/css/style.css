@@ -156,8 +156,11 @@ section.sec{padding:72px 0;}
 .serv-card h3{color:var(--navy);font-size:0.95rem;font-weight:600;margin-bottom:7px;}
 .serv-card p{color:var(--text-light);font-size:0.83rem;line-height:1.65;}
 .serv-list{list-style:none;margin-top:10px;display:flex;flex-direction:column;gap:5px;}
-.serv-list li{color:var(--text-mid);font-size:0.8rem;display:flex;align-items:center;gap:7px;}
-.serv-list li::before{content:'✓';color:var(--orange);font-weight:700;font-size:0.75rem;}
+.serv-list li{color:var(--text-mid);font-size:0.8rem;display:block;position:relative;padding-left:14px;line-height:1.6;overflow-wrap:anywhere;}
+.serv-list li::before{content:'✓';color:var(--orange);font-weight:700;font-size:0.75rem;position:absolute;left:0;top:0.2em;}
+.serv-list a{color:var(--text-mid);text-decoration:none;}
+.serv-list a:hover{color:var(--orange);}
+.serv-list .nowrap{white-space:nowrap;}
 .serv-lnk{display:inline-flex;align-items:center;gap:5px;color:var(--orange);font-size:0.84rem;font-weight:600;text-decoration:none;margin-top:14px;cursor:pointer;}
 .serv-lnk:hover{color:var(--orange-dark);}
 
