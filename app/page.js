@@ -147,7 +147,7 @@ export default function HomePage() {
                 <br />
                 <a href="mailto:sales@shrotriyaindustries.com">sales@shrotriyaindustries.com</a>
                 <br />
-                <a href="mailto:info@shrotriyaindustries.com">info@shrotriyaindustries.com</a>
+                <a href="mailto:supports@shrotriyaindustries.com">supports@shrotriyaindustries.com</a>
                 <br />
                 <span style={{ marginTop: "8px", display: "inline-block" }}>Mon–Sat: 9:30 AM – 6:30 PM</span>
               </p>

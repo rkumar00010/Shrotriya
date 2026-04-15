@@ -52,7 +52,7 @@ export default function ContactPage() {
                     <p>
                       <a href="mailto:sales@shrotriyaindustries.com">sales@shrotriyaindustries.com</a>
                       <br />
-                      <a href="mailto:info@shrotriyaindustries.com">info@shrotriyaindustries.com</a>
+                      <a href="mailto:supports@shrotriyaindustries.com">supports@shrotriyaindustries.com</a>
                     </p>
                   </div>
                 </div>

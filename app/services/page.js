@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import PageHero from "../_shared/PageHero";
 
 export default function ServicesPage() {
@@ -82,7 +82,7 @@ export default function ServicesPage() {
                   <li>Phone: <a className="nowrap" href="tel:01204196566">0120-4196566</a>, <a className="nowrap" href="tel:9310468210">9310468210</a></li>
                   <li>Mobile: <a className="nowrap" href="tel:9911411821">9911411821</a></li>
                   <li><a className="nowrap" href="mailto:sales@shrotriyaindustries.com">sales@shrotriyaindustries.com</a></li>
-                  <li><a className="nowrap" href="mailto:info@shrotriyaindustries.com">info@shrotriyaindustries.com</a></li>
+                  <li><a className="nowrap" href="mailto:supports@shrotriyaindustries.com">supports@shrotriyaindustries.com</a></li>
                 </ul>
                 <Link className="serv-lnk" href="/contact">
                   Contact us →
